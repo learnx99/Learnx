@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index Page</title>
+<style>
+	
+        * { margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;  }
+			
+body{ background: #f8fbfd;
+            color: #333;}
+    /*--------------------------------------------------------------------- NAVBAR */
+    nav {	position: sticky;
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 12px 25px;
+            flex-wrap: wrap;
+			background: white;
+			z-index: 10000;		}
+.learnx-logo {display: flex;
+			  align-items: center;
+			  gap: 10px;
+              text-decoration: none;
+              flex-shrink: 0;	}
+    
+.learnx-logo img{ width: 60px;
+				  height: 60px;
+				  object-fit: contain; }
+.logo-text{ display: flex;
+            flex-direction: column;	   }	
+      
+.a2-learn { font-size: 32px;
+            font-weight: 700;
+            color: #092c63;
+            line-height: 1.1;	}
+.a2-learn span { color: #1669ec; }
+.tagline {  font-size: 13px;
+            color: #555;
+            margin-top: 5px; }
+    /*------------------------------------------------------------- NAVIGATION */
+.sec-ul {   display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            list-style: none; }
+
+.sec-ul a { color: #092c63;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600; }
+.sec-ul a.active{color: white; background: #092c63; 
+				 padding: 10px 16px; border-radius: 6px;}
+.sec-ul a:hover { color: #1669ec; }
+.sec-ul a.active:hover{color: white; background: #092c63;}
+	/* -------------------------------------------------------------LOGIN AND REGISTER */
+.button-div{display: flex;
+            align-items: center;
+            gap: 10px; }
+
+.button-login	{
+				 display: inline-block;
+				 padding: 11px 16px;
+				 border-radius: 6px;
+				 cursor: pointer;
+				 font-size: 15px;
+				 font-weight: 600;
+				 text-decoration: none;
+				 color: #092c63;
+				 background: white;
+				 border: 2px solid #1669ec; }
+
+button:hover,.start-btn:hover { opacity: 0.85; }
+
+
+
+.a4-learn { min-height: 600px;
+            padding: 60px 35px;
+            background: #092c63;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;gap: 25px;	}
+    /* -------------------------------------------------------------------LEFT TEXT */
+.learn-text{flex: 1.2;
+            min-width: 0;
+        }
+
+        .learn-text h1 {
+            color: white;
+            font-size: 44px;
+            margin-bottom: 8px;
+        }
+
+        .learn-text h1 span {
+            color: yellow;
+            font-size: 48px;
+        }
+
+        .learn-text h3 {
+            color: #65a0ff;
+            font-size: 23px;
+            margin: 20px 0 12px;
+            line-height: 1.4;
+        }
+
+        .learn-text p {
+            color: white;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .start-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 13px 22px;
+            background: #1669ec;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+
+    /*----------------------------------------------------HERO ME  CENTER IMAGE KE LIYE*/
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 700px;
+            height: 550px;
+            object-fit: contain;
+            object-position: bottom;
+        }
+
+		 /* BOTTOM BENEFITS */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 20px;
+            padding: 30px;
+            background: #f4f7ff;
+        }
+
+        .benefit {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 12px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px #0001;
+        }
+
+        .benefit-icon {
+            width: 42px;
+            height: 42px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e8f0ff;
+            color: #1669ec;
+            border-radius: 50%;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .benefit h3 {
+            color: #092c63;
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+
+        .benefit p {
+            color: #666;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+		
+		.popular-courses
+		{
+			padding: 20px;
+			background: #f8fbfd;
+		}
+
+		.course-heading
+		{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 18px;
+		}
+
+		.course-heading h2 {font-size: 22px; color: #10234b;}
+
+		.course-heading h2::after 
+		{
+			content: "";
+			display: block;
+			width: 60px;
+			height: 5px;
+			background: #087bff;
+			margin-top: 7px;
+		}
+
+		.course-heading a
+		{
+			color: #087bff;
+			text-decoration: none;
+			font-size: 13px;
+		}
+
+		.courses-container 
+		{
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 14px;
+		}
+
+		.course-card
+		{ 
+		height:auto;
+		border: 1px solid #dce5ed;
+		border-radius: 8px;
+		overflow: hidden;
+		background: white;
+		transition: 0.3s; text-decoration:none;
+		}
+
+		.course-card:hover {transform: translateY(-5px); box-shadow: 0 6px 18px #00000015;}
+
+		.course-image
+		{
+		height: 120px;
+		padding: 12px;
+		position: relative;
+		overflow: hidden;
+		color: white;
+		}
+
+		
+		.course-image h1		
+		{
+			font-size: 30px;
+			position: relative;
+			z-index: 1;
+		}
+				
+	.course-image h4
+		{
+			color: #ffeb00;
+			font-size: 15px;
+			position: relative;
+			z-index: 1;
+		}
+		.popular-courses .course-card p 
+		{ 
+			font-weight:bold; 
+			font-size:18px;
+			padding: 10px 10px;
+		}
+		
+	.course-image img
+	{
+		position: absolute;
+		width: 60%;
+		height: 100%;
+		object-fit: contain;
+		right: 0;
+		bottom: 0;
+	}
+
+	.olevel,
+	.alevel,
+	.blevel,
+	.clevel 
+	{
+		background: #103b79;
+	}
+
+	.course-details 
+	{
+		padding: 12px;
+	}
+
+	.course-details ul 
+	{
+		list-style: none;
+		min-height: 65px;
+	}
+
+	.course-details li 
+	{
+		font-size: 13px;
+		margin-bottom: 4px;
+		color: #222;
+	}
+
+	.course-details li::before 
+	{
+		content: "✔️";
+		color: #08ad80;
+		font-weight: bold;
+		margin-right: 7px;
+	}
+
+	.course-bottom 
+	{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 6px;
+		margin-top: 10px;
+	}
+
+	.price 
+	{
+		background: #e1edff;
+		color: #0754d6;
+		font-weight: bold;
+		padding: 8px 10px;
+		border-radius: 7px;
+		font-size: 13px;
+		white-space: nowrap;
+	}
+
+	.enroll-btn 
+	{
+		background: #0875f9;
+		color: white;
+		text-decoration: none;
+		padding: 9px 12px;
+		border-radius: 6px;
+		font-size: 12px;
+		text-align: center;
+		white-space: nowrap;
+	}
+		
+	.enroll-btn:hover 
+	{
+		background: #0056c7;
+	}
+	.container 
+	{
+        width:90%;
+        max-width: 1200px;
+		margin: 50px auto;
+        display: flex;
+        gap: 50px;
+		align-items: stretch;
+    }
+
+    .card
+	{
+		flex:1;
+        background: #fff;
+        border: 2px solid #dce5ef;
+        border-radius: 15px;
+        padding: 25px;
+		height:500px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	}
+		html{scroll-behavior: smooth;}
+		#student-login{scroll-margin-top:100px;}
+    .heading 
+	{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 25px;
+        margin-bottom: 22px;
+        color: #10254d;
+        }
+
+        .heading .icon {
+            font-size: 30px;
+            color: #0759c9;
+        }
+        /* Login Form */
+
+        .input-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid #d2dce8;
+            border-radius: 9px;
+            padding: 13px;
+            margin-bottom: 12px;
+        }
+
+        .input-box .icon {
+            font-size: 21px;
+            color: #536781;
+        }
+
+        .input-box input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            color: #10254d;
+            background: transparent;
+        }
+
+        .password-box {
+            position: relative;
+        }
+
+        .password-box input {
+            min-width: 0;
+        }
+
+        .eye {
+            cursor: pointer;
+            font-size: 20px;
+            color: #536781;
+        }
+        a {
+            color: #0759c9;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 9px;
+            background: #0865ee;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background: #064fbe;
+        }
+
+        .or {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 25px 0;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .or::before,
+        .or::after {
+            content: "";
+            height: 2px;
+            background: #d5d9df;
+            flex: 1;
+        }
+
+        .create-btn {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #0865ee;
+            border-radius: 9px;
+            background: white;
+            color: #0759c9;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .create-btn:hover {
+            background: #eef5ff;
+        }
+		.intro
+		{
+			width: 500px;
+			height: 500px;
+			background: white;
+			height:500px;
+			padding:30px;
+			border-radius:20px;
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+			color:#092c63;
+			gap: 15px;
+			box-sizing: border-box;
+		}
+		.intro h1{font-size: 33px; color:#1669ec;}
+		.intro h2{font-size: 28px;}
+		.intro p{font-size: 16px; line-height: 1.6;}
+		.intro-list{display: grid; grid-template-columns: 1fr 1fr;}
+		.intro-footer{
+					margin-top: auto; 
+					background: #1669ec;
+					color: white;
+					padding: 15px;
+					text-align: center;
+					font-weight: bold;
+					border-radius: 10px;}
+
+
+/* SINGLE LINE FOOTER */
+.bottom-fotter {
+    width: 100%;
+    min-height: 95px;
+    padding: 15px 25px;
+    background: #092c63;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* BRAND */
+img	
+	{
+	height:60px;
+	width:60px;
+	}
+.a3-learn
+	{
+	color:white;
+	}
+.a3-learn span
+	{
+	color:#1669ec
+	}
+.tagline-2
+	{
+	color:white;
+	margin-top:8px;
+	}
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+
+
+.footer-brand h2 {
+    font-size: 23px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.footer-brand p {
+    font-size: 13px;
+    color: #d6e4ff;
+    white-space: nowrap;
+}
+
+/* COPYRIGHT */
+.footer-copy {
+    color: #e2eaff;
+    font-size: 12px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+ /*-------------------------------------MEDIUM SIZE JISE KAHTE HAI TABLET RESPONSIVE */
+        @media (max-width: 1000px) {
+    nav 		{	justify-content: center;	}
+	
+	.a4-learn 		{	padding: 45px 20px;
+					gap: 15px;  }
+	.learn-text h1 	{	font-size: 34px;   	}
+	.learn-text h1 span{font-size: 36px;    }
+	.learn-text h3 	{  	font-size: 19px;  	}
+	.hero-image img {  	height: 290px;  	}
+	.bottom-fotter 	{	flex-wrap: wrap;
+					justify-content:center;
+					text-align: center;	}
+	.container		{grid-template-columns: 2fr 0fr;
+					width: 95%;
+					gap: 20px;}
+	.card:			{margin: 0; padding: 18;}}
+/* --------------------------------------------------------MOBILE RESPONSIVE */
+        @media (max-width: 600px) {
+	nav 		{   padding: 15px 10px;
+					gap: 15px;      	}
+.a2-learn 		{	font-size: 27px; 	}
+.learnx-logo img{ 	width: 45px;
+					height: 45px; 		}
+.sec-ul 		{	width: 100%;
+					flex-wrap: wrap;
+					gap: 15px; 			}
+.sec-ul a 		{  	font-size: 14px;  	}
+.button-div 	{	justify-content: center; }
+.a4-learn 		{	flex-direction: column;
+					padding: 40px 20px;
+					text-align: center;
+					gap: 25px; 		}
+.learn-text 	{  	width: 100%; }
+.learn-text h1 	{	font-size: 32px;}
+.learn-text h1 span{font-size: 35px;}
+.learn-text h3 	{	font-size: 20px;}
+.learn-text p 	{   font-size: 14px;}
+.hero-image 	{   width: 100%;   	}
+.hero-image img	{	width: 100%;
+					max-width: 280px;
+					height: 280px;  }
+nav 		{   padding: 15px 10px;
+					gap: 15px;      	}
+.a2-learn 		{	font-size: 27px; 	}
+.learnx-logo img{ 	width: 45px;
+					height: 45px; 		}
+.sec-ul 		{	width: 100%;
+					flex-wrap: wrap;
+					gap: 15px; 			}
+.sec-ul a 		{  	font-size: 14px;  	}
+.button-div 	{	justify-content: center; }
+.a4-learn 		{	flex-direction: column;
+					padding: 40px 20px;
+					text-align: center;
+					gap: 25px; 		}
+.learn-text 	{  	width: 100%; }
+.learn-text h1 	{	font-size: 32px;}
+.learn-text h1 span{font-size: 35px;}
+.learn-text h3 	{	font-size: 20px;}
+.learn-text p 	{   font-size: 14px;}
+.hero-image 	{   width: 100%;   	}
+.hero-image img	{	width: 100%;
+					max-width: 280px;
+					height: 280px;  }
+.features 		{   width: 100%;
+					display: grid;
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+					gap: 10px;   	}
+.feature 		{   text-align: left;
+					gap: 8px;
+					padding: 12px 8px; 	}
+.feature-icon 	{	width: 32px;
+					height: 32px;
+					font-size: 17px; 	}
+.feature h2 	{   font-size: 18px; 	}
+.benefits  		{  	grid-template-columns: 1fr;
+					padding: 20px 15px;
+					gap: 12px;		}
+.popular-courses{   padding: 12px; 	}
+.course-heading h1{ font-size: 19px;}
+.courses-container{ grid-template-columns: 1fr;
+					gap: 15px;		}
+.course-image	{   height: 150px;	}
+.course-image h3{	font-size: 26px;}
+.course-image h4{	font-size: 19px;}
+.course-details	{	padding: 14px;	}
+.container		{	display: flex;
+					flex-direction: column;
+					width: 95%;
+					gap: 20px;		}
+.card			{	width: 100%;
+					margin: 0;
+					;}
+.intro			{	height:400px;
+					width:100%;
+					flex:none;}					
+.login-ad	{	width: 100%;}					
+.heading		{	font-size: 23px;
+					gap: 10px;     	}
+.options		{	font-size: 14px;}
+.batch 			{	gap: 10px;		}
+.date 			{  	min-width: 60px;
+					height: 72px;	}
+.date strong 	{   font-size: 24px;		}
+.date span 		{	font-size: 15px;		}
+.batch-info h3 	{	font-size: 14px;		}
+.batch-info p 	{	font-size: 12px;		}
+.status 		{	padding: 7px 9px;
+					font-size: 12px;		}	
+.bottom-footer 	{	flex-direction: column;
+					padding: 25px 12px;
+					gap: 22px;				}
+.footer-brand  	{  	justify-content: center;}
+.footer-brand h2{	font-size: 22px;		}
+.footer-copy    {	white-space: normal;
+					line-height: 1.6;
+					text-align: center; 	}
+	 }
+
+.bottom-footer 	{	flex-direction: column;
+					padding: 25px 12px;
+					gap: 22px;				}
+.footer-brand  	{  	justify-content: center;}
+.footer-brand h2{	font-size: 22px;		}
+.footer-copy    {	white-space: normal;
+					line-height: 1.6;
+					text-align: center; 	}
+	 }
+</style>
+</head>
+<body>
+    <!-- NAVBAR-------------------------------- -->
+    <nav>
+        <a href="#" class="learnx-logo">
+            <img src="LX.PNG" alt="LearnX Logo">
+            <div class="logo-text">
+                <h1 class="a2-learn">
+                    Online<span>Course</span>
+                </h1>
+                <p class="tagline">Learn Anytime, Anywhere</p>
+            </div>
+        </a>
+        <ul class="sec-ul">
+			<li><a href="index.html" class="active">Home</a></li>
+			<li><a href="Courses.html">Courses</a></li>
+			<li><a href="About Us.html">About Us</a></li>
+			<li><a href="Contact.html">Contact Us</a></li>
+			<li><a href="Registration.html">Registration</a></li>
+        </ul>
+        <div class="button-div">
+            
+             <a href="index.html#student-login" class="button-login">&#128100; Login</a>
+       
+        </div>
+    </nav>
+	 <!-- NAVBAR KE NICHE KA AREA SECTION -->
+    <section class="a4-learn">
+        <!-- LEFT TEXT -->
+        <div class="learn-text">
+            <h1>Welcome to</h1>
+            <h1><span>Online Course</span></h1>
+            <h3>Study Online, Grow Your Future!</h3>
+            <p> Learn anytime, anywhere with our online
+                learning platform.<br>
+                Improve your skills and achieve your goals.
+            </p>
+            <a href="#" class="start-btn">
+                Start Learning &rarr;
+            </a>
+        </div>
+        <!-- CENTER IMAGE -->
+        <div class="hero-image">
+            <img src="students.png" alt="Student holding books">
+        </div>
+		
+	</section>
+	
+		<!-- BOTTOM BENEFITS -->
+    <section class="benefits">
+        <div class="benefit">
+            <div class="benefit-icon">&#9733;</div>
+            <div>
+                <h3>Expert Faculty</h3>
+                <p>Learn from experienced teachers</p>
+            </div>
+        </div>
+        <div class="benefit">
+            <div class="benefit-icon">&#9201;</div>
+            <div>
+                <h3>Flexible Learning</h3>
+                <p>Study at your own pace</p>
+            </div>
+        </div>
+        <div class="benefit">
+            <div class="benefit-icon">&#9993;</div>
+            <div>
+                <h3>24x7 Doubt Support</h3>
+                <p>Get help with your questions</p>
+            </div>
+        </div>
+        <div class="benefit">
+            <div class="benefit-icon">&#43;</div>
+            <div>
+                <h3>Upcoming Batches</h3>
+                <p>New batches every week</p>
+            </div>
+        </div>
+    </section>
+	
+	<section class="popular-courses" id="courses">
+		<div class="course-heading">
+			<h2>Our Popular Courses</h2>
+			<a href="Course.html">View All →</a>
+		</div>
+		<div class="courses-container">
+        <!-- Course 1 -->
+			<div class="course-card">
+				<div class="course-image olevel">
+					<h1>O Level</h1>
+					<h4>Coumpeter<br>Courses</h4>
+					<img src="olevel.avif" alt="O Level Course" class="olevel-img" >
+				</div>
+			
+				<p>
+					O Level is a foundation-level computer course offered by NIELIT.
+					It provides basic knowledge of Information Technology,Computer
+					Applications,Programming, Web Designing and Internet concepts. 
+					Students learn practical computer skills and develop a strong
+					foundation for further studies and entry-level IT jobs.
+				</p>
+			
+				<div class="course-details">
+                
+					<div class="course-bottom">
+						<span class="price">₹ 999</span>
+						<a href="#" class="enroll-btn">Enroll Now</a>
+					</div>
+				</div>
+			</div>
+		
+        <!-- Course 2 -->
+			<div class="course-card">
+				<div class="course-image alevel">
+					<h1>A Level</h1>
+					<h4>Coumpeter<br>Courses</h4>
+					<img src="alev.webp" alt="A Level Course">
+				</div>
+				<p>
+					A Level is an advanced diploma-level computer course offered by NIELIT.
+					It provides knowledge of programming, database management,
+					web technologies, software development and computer applications.
+					Students develop technical and problem-solving skills
+					through theoretical and practical learning.
+					It helps students prepare for advanced IT careers.
+				</p>
+				<div class="course-details">
+                
+					<div class="course-bottom">
+						<span class="price">₹ 2,499</span>
+						<a href="#" class="enroll-btn">Enroll Now</a>
+					</div>
+				</div>
+			</div>
+		
+        <!----------------------------------------------------Course 3 -->
+			<div class="course-card">
+				<div class="course-image blevel">
+					<h1>B Level</h1>
+					<h4>Coumpeter<br>Courses</h4>
+					<img src="blev.webp" alt="B Level Course">
+				</div>
+				<p>
+			
+					B Level is an advanced professional computer qualification offered by NIELIT. 
+					It focuses on software engineering, programming, database systems,
+					networking and advanced computer applications.
+					Students gain deeper technical knowledge and practical experience.
+					This course helps learners develop professional IT skills and prepare
+					for higher-level technology roles.
+				
+				</p>
+				
+				<div class="course-details">
+                
+					<div class="course-bottom">
+						<span class="price">₹ 3,999</span>
+						<a href="#" class="enroll-btn">Enroll Now</a>
+					</div>
+				</div>
+			</div>
+		
+        <!-- Course 4 -->
+			<div class="course-card">
+				<div class="course-image clevel">
+					<h1>C Level</h1>
+					<h4>Computer<br>Course</h4>
+					<img src="clevel.jpeg" alt="C Level">
+				</div>
+			
+				<p>
+					C Level is a higher-level computer qualification offered by NIELIT.
+					It focuses on advanced computing, software development, system analysis,
+					project management and modern IT technologies.
+					Students develop strong analytical, technical and management skills. 
+					It is designed for learners seeking advanced knowledge and leadership
+					opportunities in the IT field.
+			
+				</p>
+			
+				<div class="course-details">
+                
+					<div class="course-bottom">
+						<span class="price">₹ 1,499</span>
+						<a href="#" class="enroll-btn">Enroll Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<div class="container">
+        <!-- Student Login Card -->
+        <section class="card"	id="student-login">
+            <h1 class="heading">
+                
+                Student Login
+            </h1>
+            <form onsubmit="loginStudent(event)">
+                <div class="input-box">
+                    
+                    <input type="text"
+                           placeholder="Enter Email / Mobile">
+                </div>
+                <div class="input-box password-box">
+                    
+                    <input type="password"
+                           id="password"
+                           placeholder="Enter Password">
+                    
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Login
+                </button>
+            </form>
+            <div class="or">OR</div>
+            <button class="create-btn"
+                    onclick="createAccount()">
+                 Create New Account
+            </button>
+			
+			</section>
+			
+			
+        
+        <div class="intro">
+			<h2>Welcome to Online Course</h2> 
+			
+			<h1>Start Your Journey Towards Success</h1>
+			
+			<p>
+				Learning is the frist step towords achieving your dreams.
+				Improve your knowledge and build a better future with us.
+			</p>
+			
+			<hr>
+			
+			<h3>What We Offer</h3>
+			
+			<div class="intro-list">
+			
+				<p> Coumpeter Education </p>
+				<p> Online Course </p>
+				<p> Online Classes</p>
+				<p> Mock Tests</p>
+			
+			</div>
+			
+			<div class="intro-footer">
+				
+				Learn Today, Lead Tomorrow
+			
+			</div>
+			
+		</div>
+	</div>
+	
+<!---------------------------------------ONLINE BATCH FOOTER -->
+	<footer class="bottom-fotter">
+
+    <!-- LOGO -->
+    <div class="footer-brand">
+	
+        <img src="LX.png">
+
+        <div>
+            <h1 class="a3-learn">
+                Online<span>Course</span>
+            </h1>
+				<p class="tagline-2">Learn Anytime, Anywhere</p>
+        </div>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <p class="footer-copy">
+        © 2026 Online Batch. All Rights Reserved.
+    </p>
+
+</footer>
+</body>
+</html>

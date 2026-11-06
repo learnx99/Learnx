@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Us</title>
+<style>
+	
+        * { margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;  }
+			
+body{ background: #f8fbfd;
+            color: #333;}
+    /*--------------------------------------------------------------------- NAVBAR */
+    nav {	position: sticky;
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 12px 25px;
+            flex-wrap: wrap;
+			background: white;
+			z-index: 10000;		}
+.learnx-logo {display: flex;
+			  align-items: center;
+			  gap: 10px;
+              text-decoration: none;
+              flex-shrink: 0;	}
+    
+.learnx-logo img{ width: 60px;
+				  height: 60px;
+				  object-fit: contain; }
+.logo-text{ display: flex;
+            flex-direction: column;	   }	
+      
+.a2-learn { font-size: 32px;
+            font-weight: 700;
+            color: #092c63;
+            line-height: 1.1;	}
+.a2-learn span { color: #1669ec; }
+.tagline {  font-size: 13px;
+            color: #555;
+            margin-top: 5px; }
+    /*------------------------------------------------------------- NAVIGATION */
+.sec-ul {   display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            list-style: none; }
+
+.sec-ul a { color: #092c63;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600; }
+.sec-ul a.active{color: white; background: #092c63; 
+				 padding: 10px 16px; border-radius: 6px;}
+.sec-ul a:hover { color: #1669ec; }
+.sec-ul a.active:hover{color: white; background: #092c63;}
+	/* -------------------------------------------------------------LOGIN AND REGISTER */
+.button-div{display: flex;
+            align-items: center;
+            gap: 10px; }
+.button-login	{
+				 display: inline-block;
+				 padding: 11px 16px;
+				 border-radius: 6px;
+				 cursor: pointer;
+				 font-size: 15px;
+				 font-weight: 600;
+				 text-decoration: none;
+				 color: #092c63;
+				 background: white;
+				 border: 2px solid #1669ec; }
+
+button:hover,.start-btn:hover { opacity: 0.85; }
+
+			/* HEADER */
+				.about-header 
+				{
+					height: 130px;
+					padding: 25px 35px;
+					background: linear-gradient(110deg, #082e78, #0872c9);
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					gap: 20px;
+					overflow: hidden;
+				}
+
+			.header-text {flex: 1;}
+
+			.header-text h1
+			{
+				color: white;
+				font-size: 40px;
+				margin-bottom: 10px;
+			}
+
+			.header-text p {
+				color: white;
+				font-size: 19px;
+				line-height: 1.5;
+			}	
+
+.header-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-image img {
+	margin-bottom:0px;
+    width: 390px;
+    height: 125px;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: 10px;
+}
+
+/* STORY AND MISSION */
+.about-content {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 25px;
+    padding: 28px 25px;
+    background: white;
+}
+
+.story h2,
+.mission h2 {
+    font-size: 27px;
+    margin-bottom: 14px;
+    color: #092c63;
+}
+
+.story p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    color: #24334d;
+}
+
+/* MISSION BOX */
+.mission {
+    padding: 22px 25px;
+    background: #e1f2ff;
+    border-radius: 12px;
+}
+
+.mission ul {
+    list-style: none;
+}
+
+.mission li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 13px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.check {
+    width: 23px;
+    height: 23px;
+    flex-shrink: 0;
+    background: #16b879;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* STATISTICS */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 25px 20px;
+    background: white;
+    border: 1px solid #dce5ed;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 12px;
+    border-right: 1px solid #dce5ed;
+}
+
+.stat-card:last-child {
+    border-right: none;
+}
+
+.stat-icon {
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    font-size: 32px;
+}
+
+.blue {
+    background: #e2efff;
+    color: #0875ed;
+}
+
+.green {
+    background: #e0fff0;
+    color: #13b878;
+}
+
+.orange {
+    background: #fff1c8;
+    color: #efa900;
+}
+
+.stat-card h3 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #092c63;
+}
+
+.stat-card p {
+    font-size: 16px;
+    color: #25344f;
+}
+
+			
+			
+			
+	
+/* ---------------- FOOTER ---------------- */
+
+.bottom-footer {
+    width: 100%;
+    min-height: 95px;
+    padding: 15px 25px;
+    background: #092c63;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.footer-brand img {
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+}
+
+.a3-learn {
+    color: white;
+}
+
+.a3-learn span {
+    color: #1669ec;
+}
+
+.tagline-2 {
+    color: white;
+    margin-top: 8px;
+}
+
+.footer-copy {
+    color: #e2eaff;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+			
+			
+
+        /* TABLET RESPONSIVE */
+        @media (max-width: 1000px) {
+            nav {
+                justify-content: center;
+            }
+			
+			
+			  .about-header {
+        padding: 22px;
+    }
+
+    .header-text h1 {
+        font-size: 32px;
+    }
+
+    .header-text p {
+        font-size: 16px;
+    }
+
+    .about-content {
+        gap: 18px;
+        padding: 22px 15px;
+    }
+
+    .story p,
+    .mission li {
+        font-size: 14px;
+    }
+
+    .mission {
+        padding: 18px;
+    }
+
+    .stats {
+        margin: 0 15px 15px;
+    }
+
+    .stat-card {
+        gap: 9px;
+        padding: 15px 8px;
+    }
+
+    .stat-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 25px;
+    }
+
+    .stat-card h3 {
+        font-size: 23px;
+    }
+
+    .stat-card p {
+        font-size: 13px;
+    }
+			
+			
+			
+			
+			
+			.bottom-fotter {
+				flex-wrap: wrap;
+				justify-content:center;
+				text-align: center;
+			}
+			.fotter-ilinks{
+				order: 3;
+				width: 100%;
+				row-gap: 15px;
+			}
+		}
+		
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 800px) {
+            nav {
+                padding: 15px 10px;
+                gap: 15px;
+            }
+
+            .a2-learn {
+                font-size: 27px;
+            }
+
+            .learnx-logo img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .sec-ul {
+                width: 100%;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .sec-ul a {
+                font-size: 14px;
+            }
+
+            .button-div {
+                justify-content: center;
+            
+			}
+			
+			
+			 .about-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px 18px 0;
+        gap: 15px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    .header-text p {
+        font-size: 15px;
+    }
+
+    .header-image {
+        width: 100%;
+    }
+
+    .header-image img {
+        height: 150px;
+        max-width: 80%;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        padding: 22px 12px;
+        gap: 20px;
+    }
+
+    .story h2,
+    .mission h2 {
+        font-size: 24px;
+    }
+
+    .story p,
+    .mission li {
+        font-size: 14px;
+    }
+
+    .mission {
+        padding: 18px 15px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+        margin: 0 12px 15px;
+    }
+
+    .stat-card {
+        justify-content: flex-start;
+        padding: 15px 20px;
+        border-right: none;
+        border-bottom: 1px solid #dce5ed;
+    }
+
+    .stat-card:last-child {
+        border-bottom: none;
+    }
+
+    .stat-card h3 {
+        font-size: 25px;
+    }
+
+    .stat-card p {
+        font-size: 14px;
+    }
+			
+			
+			
+			
+			
+			
+			
+			
+
+				  .bottom-footer {
+			flex-direction: column;
+			padding: 25px 12px;
+			gap: 22px;
+			}
+
+			.footer-brand {
+			justify-content: center;
+			}
+
+			.footer-brand h2 {
+			font-size: 22px;
+			}
+
+			.footer-links {
+			gap: 15px 0;
+			}
+
+			.footer-links li {
+			padding: 0 9px;
+			}
+	
+			.footer-links a {
+			font-size: 13px;
+			}
+
+			.footer-socials {
+			justify-content: center;
+			}
+
+			.footer-copy {
+			white-space: normal;
+			line-height: 1.6;
+			text-align: center;
+			}
+		}
+		
+		</style>
+</head>
+<body>
+ 
+<!-- ---------------- NAVBAR ---------------- -->
+
+<nav>
+
+    <a href="#" class="learnx-logo">
+
+        <img src="LX.PNG" alt="LearnX Logo">
+
+        <div class="logo-text">
+
+            <h1 class="a2-learn">
+                Online<span>Course</span>
+            </h1>
+
+            <p class="tagline">Learn Anytime, Anywhere</p>
+
+        </div>
+
+    </a>
+
+    <ul class="sec-ul">
+
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="Courses.html">Courses</a></li>
+
+        <li><a href="About Us.html" class="active">About Us</a></li>
+
+        <li><a href="Contact.html">Contact Us</a></li>
+
+        <li><a href="Registration.html">Registration</a></li>
+
+    </ul>
+
+    <div class="button-div">
+
+             <a href="index.html#student-login" class="button-login">&#128100; Login</a>
+       
+    </div>
+
+</nav>
+
+
+
+
+	
+	
+	
+
+<header class="about-header">
+
+    <div class="header-text">
+        <h1>About Us</h1>
+        <p>Learn, Grow and Achieve with Online Course</p>
+    </div>
+
+    <div class="header-image">
+        <img
+            src="students.png"
+            alt="Students learning together"
+        >
+    </div>
+
+</header>
+
+<!-- ABOUT CONTENT -->
+<section class="about-content">
+
+    <!-- OUR STORY -->
+    <div class="story">
+        <h2>Our Story</h2>
+
+        <p>
+            Online Course is a trusted online learning platform
+            for students preparing for competitive exams like
+            O Level, A Level, B Level, C Level and more. We aim to
+            provide quality education through live classes,
+            recorded videos, PDF Notes and regular mock tests.
+        </p>
+
+        <p>
+            Our goal is to make learning simple, easy and
+            affordable for every student, so that they can
+            achieve their dreams.
+        </p>
+    </div>
+
+    <!-- OUR MISSION -->
+    <div class="mission">
+        <h2>Our Mission</h2>
+
+        <ul>
+            <li>
+                <span class="check">✓</span>
+                <span>Provide quality education to all</span>
+            </li>
+
+            <li>
+                <span class="check">✓</span>
+                <span>Expert faculty and best Online Courses</span>
+            </li>
+
+            <li>
+                <span class="check">✓</span>
+                <span>Regular tests and doubt support</span>
+            </li>
+
+            <li>
+                <span class="check">✓</span>
+                <span>Help students achieve their goals</span>
+            </li>
+        </ul>
+    </div>
+
+</section>
+
+<!-- STATISTICS -->
+<section class="stats">
+
+    <div class="stat-card">
+        <div class="stat-icon blue">👥</div>
+        <div>
+            <h3>5000+</h3>
+            <p>Active Students</p>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon green">👤</div>
+        <div>
+            <h3>200+</h3>
+            <p>Expert Teachers</p>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon orange">♧</div>
+        <div>
+            <h3>1000+</h3>
+            <p>Study Materials</p>
+        </div>
+    </div>
+</section>	
+
+<!-- ---------------- FOOTER ---------------- -->
+
+<footer class="bottom-footer">
+
+    <div class="footer-brand">
+
+        <img src="LX.PNG" alt="LearnX Logo">
+
+        <div>
+
+            <h1 class="a3-learn">
+                Online<span>Course</span>
+            </h1>
+
+            <p class="tagline-2">
+                Learn Anytime, Anywhere
+            </p>
+
+        </div>
+
+    </div>
+
+    <p class="footer-copy">
+        © 2026 Online Batch. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>

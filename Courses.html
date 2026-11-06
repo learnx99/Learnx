@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index Page</title>
+<style>
+	
+        * { margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;  }
+			
+body{ background: #f8fbfd;
+            color: #333;}
+/* --------------------------------------------------------------------- NAVBAR ------------- */
+    nav {	position: sticky;
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 12px 25px;
+            flex-wrap: wrap;
+			background: white;
+			z-index: 10000;		}
+.learnx-logo {display: flex;
+			  align-items: center;
+			  gap: 10px;
+              text-decoration: none;
+              flex-shrink: 0;	}
+    
+.learnx-logo img{ width: 60px;
+				  height: 60px;
+				  object-fit: contain; }
+.logo-text{ display: flex;
+            flex-direction: column;	   }	
+      
+.a2-learn { font-size: 32px;
+            font-weight: 700;
+            color: #092c63;
+            line-height: 1.1;	}
+.a2-learn span { color: #1669ec; }
+.tagline {  font-size: 13px;
+            color: #555;
+            margin-top: 5px; }
+    /*------------------------------------------------------------- NAVIGATION */
+.sec-ul {   display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            list-style: none; }
+
+.sec-ul a { color: #092c63;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600; }
+.sec-ul a.active{color: white; background: #092c63; 
+				 padding: 10px 16px; border-radius: 6px;}
+.sec-ul a:hover { color: #1669ec; }
+.sec-ul a.active:hover{color: white; background: #092c63;}
+	/* -------------------------------------------------------------LOGIN AND REGISTER */
+.button-div{display: flex;
+            align-items: center;
+            gap: 10px; }
+
+.button-login	{
+				 display: inline-block;
+				 padding: 11px 16px;
+				 border-radius: 6px;
+				 cursor: pointer;
+				 font-size: 15px;
+				 font-weight: 600;
+				 text-decoration: none;
+				 color: #092c63;
+				 background: white;
+				 border: 2px solid #1669ec; }
+
+button:hover,.start-btn:hover { opacity: 0.85; }
+
+
+
+		/* HEADER */
+			.about-header 
+				{
+				min-height: 100px;
+				padding: 25px 35px;
+				background: linear-gradient(110deg, #082e78, #0872c9);
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 20px;
+				overflow: hidden;
+				}
+
+			.header-text {flex: 1; margin-left:60px;}
+
+			.header-text h1
+				{
+				color: white;
+				font-size: 35px;
+				margin-bottom: 5px;
+				}
+			.header-text h1 span 
+				{color:#1669ec;}
+			
+			.header-text p 
+				{
+				color: white;
+				font-size: 19px;
+				line-height: 1.5;
+				}	
+				
+				
+/*------------TABLE DESIGN-------------*/
+	.table_con{
+		text-align:center;
+		margin-top:0px;
+		width:100%;
+		background:#f8fbfd;
+	}
+	.table_con h1 
+		{
+		color:#092c63;
+		font-size: 40px;
+		}
+		
+	.table_con caption p
+		{
+		color: #555;
+		font-size: 16px;
+		margin-bottom: 0px;
+		}
+		
+	.tab
+	{
+	width: 80%;
+	height:297px;
+	margin: 0px ;
+	border-collapse: collapse;
+	border: 2px solid gray;
+	}
+
+	.tab tr
+		{
+		
+		
+		color: black;
+		padding: 15px;
+		font-size: 20px;
+		font-weight: bold;
+		border-bottom: 2px solid gray;
+		}
+	.tab td
+		{
+		padding: 15px;
+		border: 2px solid gray;
+		font-size: 16px;
+		text-align: center;
+		}
+	.table-tr{background:#f8fbfd ;}
+	.bg{background:white;}
+	table tr td ul li{list-style: none;}
+/*---------------------------------- SINGLE LINE FOOTER */
+	.bottom-footer
+	{
+		width: 100%;
+		min-height: 95px;
+		padding: 15px 25px;
+		background: #092c63;
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+	}
+	
+/* --------------------------------FOTTER ME LOGO AND TEXT KE LIYE */
+ img {
+		height:60px;
+		width:60px;
+	}
+	.a3-learn
+		{
+		color:white;
+		}
+	.a3-learn span
+		{
+		color:#1669ec;
+		}
+	.tagline-2
+		{
+		color:white;
+		margin-top:8px;
+		}	
+	.footer-brand 
+		{
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		flex-shrink: 0;
+		}
+
+
+.footer-brand h2 {
+    font-size: 23px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.footer-brand p {
+    font-size: 13px;
+    color: #d6e4ff;
+    white-space: nowrap;
+}
+
+
+/*-----------------------------------------FOTTER ME  COPYRIGHT */
+.footer-copy {
+    color: #e2eaff;
+    font-size: 12px;
+    white-space: nowrap;
+    flex-shrink: 0;
+	margin-right:50px;
+}
+       /* TABLET RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    nav {
+        justify-content: center;
+    }
+
+    .bottom-footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    nav {
+        padding: 15px 10px;
+        gap: 15px;
+    }
+
+    .sec-ul {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .sec-ul a {
+        font-size: 14px;
+    }
+
+    .tab {
+        width: 95%;
+        height: auto;
+    }
+
+    .tab td {
+        padding: 8px 4px;
+        font-size: 12px;
+    }
+
+    .table_con h1 {
+        font-size: 27px;
+    }
+
+    .bottom-footer {
+        flex-direction: column;
+        padding: 25px 12px;
+        gap: 22px;
+    }
+
+    .footer-copy {
+        white-space: normal;
+        text-align: center;
+    }
+
+}	
+		</style>
+</head>
+<body>
+ <!-- NAVBAR -->
+    <nav>
+        <a href="#" class="learnx-logo">
+            <img src="LX.PNG" alt="LearnX Logo">
+
+            <div class="logo-text">
+                <h1 class="a2-learn">
+                    Online<span>Course</span>
+                </h1>
+                <p class="tagline">Learn Anytime, Anywhere</p>
+            </div>
+        </a>
+
+        <ul class="sec-ul">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="Courses.html" class="active">Courses</a></li>
+			<li><a href="About Us.html">About Us</a></li>
+			<li><a href="Contact.html">Contact Us</a></li>
+			<li><a href="Registration.html">Ragistration</a></li>
+        </ul>
+        
+    <div class="button-div">
+
+             <a href="index.html#student-login" class="button-login">&#128100; Login</a>
+       
+    </div>
+
+    </nav>
+	
+	
+	
+<header class="about-header">
+
+    <div class="header-text">
+        <h1>Our <span>Courses</span></h1>
+        <p>Learn, Grow and Achieve with Online Batch</p>
+    </div>
+
+</header>
+	
+	<!------------------------------------Course List----------------------->
+
+<section class="table_con">
+	<center>
+	<table class="tab" >
+	 <caption>
+		<h1>Computer Courses</h1>
+		<p>Course Details and Fee Structure</p>
+	 </caption>
+	 
+		<tr class="table-tr">
+			<td>Course Name</td>
+			<td>Duration</td>
+			<td>Syllabus</td>
+			<td>Fees</td>
+		</tr>
+		
+		<tr class="bg">
+			<td>O Level</td>
+			<td>1 Year</td>
+			<td> <ul><li>IT Tools</li><li> Web Design</li><li> Python</li><li> IoT</li></ul></td>
+			<td>Rs.15,000.00</td>
+		</tr>
+		<tr class="bg">
+			<td>A Level</td>
+			<td>1.5 Year</td>
+			<td> <ul><li>Programming</li><li> Data Structures</li><li> Database</li></td>
+			<td>Rs.30,000.00</td>
+		</tr>
+		<tr class="bg">
+			<td>B Level</td>
+			<td>1.5-2 Year</td>
+			<td><ul><li>Advanced Programming</li><li> Software Development</ul></td>
+			<td>Rs.50,000.00</td>
+		</tr>
+		<tr class="bg">
+			<td>C Level</td>
+			<td>According To Institute</td>
+			<td><ul><li>Advanced IT</li><li> SSystem Design</li><li> Projects</ul></td>
+			<td>Rs.80,000.00</td>
+		</tr>
+	</table>
+	</center>
+</section>
+
+<!---------------------------------------ONLINE BATCH FOOTER -->
+<footer class="bottom-footer">
+
+    <!-- LOGO -->
+    <div class="footer-brand">
+        <div class="footer-cap"><img src="LX.png"></div>
+
+        <div class="logo-text">
+                <h1 class="a3-learn">
+                    Online<span>Course</span>
+                </h1>
+                <p class="tagline-2">Learn Anytime, Anywhere</p>
+            </div>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <p class="footer-copy">
+        © 2026 Online Batch. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
